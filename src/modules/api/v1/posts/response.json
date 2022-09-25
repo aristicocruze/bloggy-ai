@@ -1,0 +1,692 @@
+ status: 200
+    statusText: "OK"
+    headers: {
+      "date": "Sun, 25 Sep 2022 18:53:12 GMT",
+      "content-type": "application/json",     
+      "content-length": "280",
+      "connection": "close",
+      "access-control-allow-origin": "*",
+      "cache-control": "no-cache, must-revalidate",
+      "openai-model": "text-davinci-002",
+      "openai-organization": "user-vghbwg3i4nxzqnkz8kwmuewy",
+      "openai-processing-ms": "362",
+      "openai-version": "2020-10-01",
+      "strict-transport-security": "max-age=15724800; includeSubDomains",
+      "x-request-id": "9c665470ee2ac3a9d52336252069d47f"
+    }
+    config: {
+      "transitional": {
+        "silentJSONParsing": true,
+        "forcedJSONParsing": true,
+        "clarifyTimeoutError": false
+      },
+      "transformRequest": [
+        null
+      ],
+      "transformResponse": [
+        null
+      ],
+      "timeout": 0,
+      "xsrfCookieName": "XSRF-TOKEN",
+      "xsrfHeaderName": "X-XSRF-TOKEN",
+      "maxContentLength": -1,
+      "maxBodyLength": -1,
+      "headers": {
+        "Accept": "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+        "User-Agent": "OpenAI/NodeJS/3.0.0",
+        "Authorization": "Bearer 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",
+        "Content-Length": 89
+      },
+      "method": "post",
+      "data": "{\"model\":\"text-davinci-002\",\"prompt\":\"Say this is a test\",\"temperature\":0,\"max_tokens\":6}",
+      "url": "https://api.openai.com/v1/completions"
+    }
+    request: {
+      "_closed": false,
+      "_contentLength": null,
+      "_defaultKeepAlive": true,
+      "_ended": true,
+      "_events": {},
+      "_eventsCount": 7,
+      "_hasBody": true,
+      "_header": "POST /v1/completions HTTP/1.1\r\nAccept: application/json, text/plain, */*\r\nContent-Type: application/json\r\nUser-Agent: OpenAI/NodeJS/3.0.0\r\nAuthorization: Bearer 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\r\nContent-Length: 89\r\nHost: api.openai.com\r\nConnection: close\r\n\r\n",
+      "_headerSent": true,
+      "_keepAliveTimeout": 0,
+      "_last": true,
+      "_redirectable": {
+        "_currentRequest": "[Circular]",
+        "_currentUrl": "https://api.openai.com/v1/completions",
+        "_ended": true,
+        "_ending": true,
+        "_events": {},
+        "_eventsCount": 3,
+        "_options": {
+          "agents": {},
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer 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",
+            "Content-Length": 89,
+            "Content-Type": "application/json",
+            "User-Agent": "OpenAI/NodeJS/3.0.0"
+          },
+          "hostname": "api.openai.com",
+          "maxBodyLength": 10485760,
+          "maxRedirects": 21,
+          "method": "POST",
+          "nativeProtocols": {
+            "http:": {
+              "METHODS": "[Array]",
+              "STATUS_CODES": "[Object]",
+              "globalAgent": "[Object]",
+              "maxHeaderSize": 16384
+            },
+            "https:": {
+              "globalAgent": "[Object]"
+            }
+          },
+          "path": "/v1/completions",
+          "pathname": "/v1/completions",
+          "port": null,
+          "protocol": "https:"
+        },
+        "_redirectCount": 0,
+        "_redirects": [],
+        "_requestBodyBuffers": [],
+        "_requestBodyLength": 89,
+        "_writableState": {
+          "afterWriteTickInfo": null,
+          "allBuffers": true,
+          "allNoop": true,
+          "autoDestroy": true,
+          "bufferProcessing": false,
+          "buffered": [],
+          "bufferedIndex": 0,
+          "closeEmitted": false,
+          "closed": false,
+          "constructed": true,
+          "corked": 0,
+          "decodeStrings": true,
+          "defaultEncoding": "utf8",
+          "destroyed": false,
+          "emitClose": true,
+          "ended": false,
+          "ending": false,
+          "errorEmitted": false,
+          "errored": null,
+          "finalCalled": false,
+          "finished": false,
+          "highWaterMark": 16384,
+          "length": 0,
+          "needDrain": false,
+          "objectMode": false,
+          "pendingcb": 0,
+          "prefinished": false,
+          "sync": true,
+          "writecb": null,
+          "writelen": 0,
+          "writing": false
+        }
+      },
+      "_removedConnection": false,
+      "_removedContLen": false,
+      "_removedTE": false,
+      "_trailer": "",
+      "aborted": false,
+      "agent": {
+        "_events": {},
+        "_eventsCount": 2,
+        "_sessionCache": {
+          "list": [
+            "api.openai.com:443:::::::::::::::::::::"
+          ],
+          "map": {
+            "api.openai.com:443:::::::::::::::::::::": {
+              "data": "[Array]",
+              "type": "Buffer"
+            }
+          }
+        },
+        "defaultPort": 443,
+        "freeSockets": {},
+        "keepAlive": false,
+        "keepAliveMsecs": 1000,
+        "maxCachedSessions": 100,
+        "maxFreeSockets": 256,
+        "maxSockets": null,
+        "maxTotalSockets": null,
+        "options": {
+          "path": null
+        },
+        "protocol": "https:",
+        "requests": {},
+        "scheduling": "lifo",
+        "sockets": {
+          "api.openai.com:443:::::::::::::::::::::": [
+            {
+              "_SNICallback": null,
+              "_controlReleased": true,
+              "_events": "[Object]",
+              "_eventsCount": 10,
+              "_hadError": false,
+              "_host": "api.openai.com",
+              "_httpMessage": "[Circular]",
+              "_newSessionPending": false,
+              "_parent": null,
+              "_pendingData": null,
+              "_pendingEncoding": "",
+              "_readableState": "[Object]",
+              "_rejectUnauthorized": true,
+              "_requestCert": true,
+              "_secureEstablished": true,
+              "_securePending": false,
+              "_server": null,
+              "_sockname": null,
+              "_tlsOptions": "[Object]",
+              "_writableState": "[Object]",
+              "allowHalfOpen": false,
+              "alpnProtocol": false,
+              "authorizationError": null,
+              "authorized": true,
+              "connecting": false,
+              "encrypted": true,
+              "parser": null,
+              "secureConnecting": false,
+              "servername": "api.openai.com",
+              "ssl": "[Object]"
+            }
+          ]
+        },
+        "totalSocketCount": 1
+      },
+      "chunkedEncoding": false,
+      "destroyed": false,
+      "finished": true,
+      "host": "api.openai.com",
+      "maxHeadersCount": null,
+      "maxRequestsOnConnectionReached": false,
+      "method": "POST",
+      "outputData": [],
+      "outputSize": 0,
+      "parser": null,
+      "path": "/v1/completions",
+      "protocol": "https:",
+      "res": {
+        "_consuming": false,
+        "_dumped": false,
+        "_events": {
+          "end": [
+            null,
+            null
+          ]
+        },
+        "_eventsCount": 4,
+        "_readableState": {
+          "autoDestroy": true,
+          "awaitDrainWriters": null,
+          "buffer": {
+            "head": null,
+            "length": 0,
+            "tail": null
+          },
+          "closeEmitted": true,
+          "closed": true,
+          "constructed": true,
+          "dataEmitted": true,
+          "decoder": null,
+          "defaultEncoding": "utf8",
+          "destroyed": true,
+          "emitClose": true,
+          "emittedReadable": false,
+          "encoding": null,
+          "endEmitted": true,
+          "ended": true,
+          "errorEmitted": false,
+          "errored": null,
+          "flowing": true,
+          "highWaterMark": 16384,
+          "length": 0,
+          "multiAwaitDrain": false,
+          "needReadable": false,
+          "objectMode": false,
+          "pipes": [],
+          "readableListening": false,
+          "reading": false,
+          "readingMore": true,
+          "resumeScheduled": false,
+          "sync": true
+        },
+        "aborted": false,
+        "client": {
+          "_SNICallback": null,
+          "_controlReleased": true,
+          "_events": {
+            "close": [
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          "_eventsCount": 10,
+          "_hadError": false,
+          "_host": "api.openai.com",
+          "_httpMessage": "[Circular]",
+          "_newSessionPending": false,
+          "_parent": null,
+          "_pendingData": null,
+          "_pendingEncoding": "",
+          "_readableState": {
+            "autoDestroy": true,
+            "awaitDrainWriters": null,
+            "buffer": {
+              "head": null,
+              "length": 0,
+              "tail": null
+            },
+            "closeEmitted": false,
+            "closed": false,
+            "constructed": true,
+            "dataEmitted": true,
+            "decoder": null,
+            "defaultEncoding": "utf8",
+            "destroyed": false,
+            "emitClose": false,
+            "emittedReadable": false,
+            "encoding": null,
+            "endEmitted": false,
+            "ended": false,
+            "errorEmitted": false,
+            "errored": null,
+            "flowing": true,
+            "highWaterMark": 16384,
+            "length": 0,
+            "multiAwaitDrain": false,
+            "needReadable": true,
+            "objectMode": false,
+            "pipes": [],
+            "readableListening": false,
+            "reading": true,
+            "readingMore": false,
+            "resumeScheduled": false,
+            "sync": false
+          },
+          "_rejectUnauthorized": true,
+          "_requestCert": true,
+          "_secureEstablished": true,
+          "_securePending": false,
+          "_server": null,
+          "_sockname": null,
+          "_tlsOptions": {
+            "isServer": false,
+            "pipe": false,
+            "rejectUnauthorized": true,
+            "requestCert": true,
+            "secureContext": {
+              "context": {}
+            }
+          },
+          "_writableState": {
+            "afterWriteTickInfo": null,
+            "allBuffers": true,
+            "allNoop": true,
+            "autoDestroy": true,
+            "bufferProcessing": false,
+            "buffered": [],
+            "bufferedIndex": 0,
+            "closeEmitted": false,
+            "closed": false,
+            "constructed": true,
+            "corked": 0,
+            "decodeStrings": false,
+            "defaultEncoding": "utf8",
+            "destroyed": false,
+            "emitClose": false,
+            "ended": true,
+            "ending": true,
+            "errorEmitted": false,
+            "errored": null,
+            "finalCalled": true,
+            "finished": false,
+            "highWaterMark": 16384,
+            "length": 0,
+            "needDrain": false,
+            "objectMode": false,
+            "pendingcb": 1,
+            "prefinished": false,
+            "sync": false,
+            "writecb": null,
+            "writelen": 0,
+            "writing": false
+          },
+          "allowHalfOpen": false,
+          "alpnProtocol": false,
+          "authorizationError": null,
+          "authorized": true,
+          "connecting": false,
+          "encrypted": true,
+          "parser": null,
+          "secureConnecting": false,
+          "servername": "api.openai.com",
+          "ssl": {
+            "_parent": {
+              "onconnection": null,
+              "reading": true
+            },
+            "_secureContext": {
+              "context": {}
+            },
+            "reading": true
+          }
+        },
+        "complete": true,
+        "httpVersion": "1.1",
+        "httpVersionMajor": 1,
+        "httpVersionMinor": 1,
+        "method": null,
+        "rawHeaders": [
+          "Date",
+          "Sun, 25 Sep 2022 18:53:12 GMT",
+          "Content-Type",
+          "application/json",
+          "Content-Length",
+          "280",
+          "Connection",
+          "close",
+          "Access-Control-Allow-Origin",
+          "*",
+          "Cache-Control",
+          "no-cache, must-revalidate",
+          "Openai-Model",
+          "text-davinci-002",
+          "Openai-Organization",
+          "user-vghbwg3i4nxzqnkz8kwmuewy",
+          "Openai-Processing-Ms",
+          "362",
+          "Openai-Version",
+          "2020-10-01",
+          "Strict-Transport-Security",
+          "max-age=15724800; includeSubDomains",
+          "X-Request-Id",
+          "9c665470ee2ac3a9d52336252069d47f"
+        ],
+        "rawTrailers": [],
+        "redirects": [],
+        "req": "[Circular]",
+        "responseUrl": "https://api.openai.com/v1/completions",
+        "socket": {
+          "_SNICallback": null,
+          "_controlReleased": true,
+          "_events": {
+            "close": [
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          "_eventsCount": 10,
+          "_hadError": false,
+          "_host": "api.openai.com",
+          "_httpMessage": "[Circular]",
+          "_newSessionPending": false,
+          "_parent": null,
+          "_pendingData": null,
+          "_pendingEncoding": "",
+          "_readableState": {
+            "autoDestroy": true,
+            "awaitDrainWriters": null,
+            "buffer": {
+              "head": null,
+              "length": 0,
+              "tail": null
+            },
+            "closeEmitted": false,
+            "closed": false,
+            "constructed": true,
+            "dataEmitted": true,
+            "decoder": null,
+            "defaultEncoding": "utf8",
+            "destroyed": false,
+            "emitClose": false,
+            "emittedReadable": false,
+            "encoding": null,
+            "endEmitted": false,
+            "ended": false,
+            "errorEmitted": false,
+            "errored": null,
+            "flowing": true,
+            "highWaterMark": 16384,
+            "length": 0,
+            "multiAwaitDrain": false,
+            "needReadable": true,
+            "objectMode": false,
+            "pipes": [],
+            "readableListening": false,
+            "reading": true,
+            "readingMore": false,
+            "resumeScheduled": false,
+            "sync": false
+          },
+          "_rejectUnauthorized": true,
+          "_requestCert": true,
+          "_secureEstablished": true,
+          "_securePending": false,
+          "_server": null,
+          "_sockname": null,
+          "_tlsOptions": {
+            "isServer": false,
+            "pipe": false,
+            "rejectUnauthorized": true,
+            "requestCert": true,
+            "secureContext": {
+              "context": {}
+            }
+          },
+          "_writableState": {
+            "afterWriteTickInfo": null,
+            "allBuffers": true,
+            "allNoop": true,
+            "autoDestroy": true,
+            "bufferProcessing": false,
+            "buffered": [],
+            "bufferedIndex": 0,
+            "closeEmitted": false,
+            "closed": false,
+            "constructed": true,
+            "corked": 0,
+            "decodeStrings": false,
+            "defaultEncoding": "utf8",
+            "destroyed": false,
+            "emitClose": false,
+            "ended": true,
+            "ending": true,
+            "errorEmitted": false,
+            "errored": null,
+            "finalCalled": true,
+            "finished": false,
+            "highWaterMark": 16384,
+            "length": 0,
+            "needDrain": false,
+            "objectMode": false,
+            "pendingcb": 1,
+            "prefinished": false,
+            "sync": false,
+            "writecb": null,
+            "writelen": 0,
+            "writing": false
+          },
+          "allowHalfOpen": false,
+          "alpnProtocol": false,
+          "authorizationError": null,
+          "authorized": true,
+          "connecting": false,
+          "encrypted": true,
+          "parser": null,
+          "secureConnecting": false,
+          "servername": "api.openai.com",
+          "ssl": {
+            "_parent": {
+              "onconnection": null,
+              "reading": true
+            },
+            "_secureContext": {
+              "context": {}
+            },
+            "reading": true
+          }
+        },
+        "statusCode": 200,
+        "statusMessage": "OK",
+        "upgrade": false,
+        "url": ""
+      },
+      "reusedSocket": false,
+      "sendDate": false,
+      "shouldKeepAlive": false,
+      "socket": {
+        "_SNICallback": null,
+        "_controlReleased": true,
+        "_events": {
+          "close": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "_eventsCount": 10,
+        "_hadError": false,
+        "_host": "api.openai.com",
+        "_httpMessage": "[Circular]",
+        "_newSessionPending": false,
+        "_parent": null,
+        "_pendingData": null,
+        "_pendingEncoding": "",
+        "_readableState": {
+          "autoDestroy": true,
+          "awaitDrainWriters": null,
+          "buffer": {
+            "head": null,
+            "length": 0,
+            "tail": null
+          },
+          "closeEmitted": false,
+          "closed": false,
+          "constructed": true,
+          "dataEmitted": true,
+          "decoder": null,
+          "defaultEncoding": "utf8",
+          "destroyed": false,
+          "emitClose": false,
+          "emittedReadable": false,
+          "encoding": null,
+          "endEmitted": false,
+          "ended": false,
+          "errorEmitted": false,
+          "errored": null,
+          "flowing": true,
+          "highWaterMark": 16384,
+          "length": 0,
+          "multiAwaitDrain": false,
+          "needReadable": true,
+          "objectMode": false,
+          "pipes": [],
+          "readableListening": false,
+          "reading": true,
+          "readingMore": false,
+          "resumeScheduled": false,
+          "sync": false
+        },
+        "_rejectUnauthorized": true,
+        "_requestCert": true,
+        "_secureEstablished": true,
+        "_securePending": false,
+        "_server": null,
+        "_sockname": null,
+        "_tlsOptions": {
+          "isServer": false,
+          "pipe": false,
+          "rejectUnauthorized": true,
+          "requestCert": true,
+          "secureContext": {
+            "context": {}
+          }
+        },
+        "_writableState": {
+          "afterWriteTickInfo": null,
+          "allBuffers": true,
+          "allNoop": true,
+          "autoDestroy": true,
+          "bufferProcessing": false,
+          "buffered": [],
+          "bufferedIndex": 0,
+          "closeEmitted": false,
+          "closed": false,
+          "constructed": true,
+          "corked": 0,
+          "decodeStrings": false,
+          "defaultEncoding": "utf8",
+          "destroyed": false,
+          "emitClose": false,
+          "ended": true,
+          "ending": true,
+          "errorEmitted": false,
+          "errored": null,
+          "finalCalled": true,
+          "finished": false,
+          "highWaterMark": 16384,
+          "length": 0,
+          "needDrain": false,
+          "objectMode": false,
+          "pendingcb": 1,
+          "prefinished": false,
+          "sync": false,
+          "writecb": null,
+          "writelen": 0,
+          "writing": false
+        },
+        "allowHalfOpen": false,
+        "alpnProtocol": false,
+        "authorizationError": null,
+        "authorized": true,
+        "connecting": false,
+        "encrypted": true,
+        "parser": null,
+        "secureConnecting": false,
+        "servername": "api.openai.com",
+        "ssl": {
+          "_parent": {
+            "onconnection": null,
+            "reading": true
+          },
+          "_secureContext": {
+            "context": {}
+          },
+          "reading": true
+        }
+      },
+      "timeoutCb": null,
+      "upgradeOrConnect": false,
+      "useChunkedEncodingByDefault": true,
+      "writable": true
+    }
+    data: {
+      "id": "cmpl-5uR2WAG4YV6wf5BiCrCGjTHCLDUfe",
+      "object": "text_completion",
+      "created": 1664131992,
+      "model": "text-davinci-002",
+      "choices": [
+        {
+          "text": "\n\nThis is a test",
+          "index": 0,
+          "logprobs": null,
+          "finish_reason": "length"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 5,
+        "completion_tokens": 6,
+        "total_tokens": 11
+      }
+    }
