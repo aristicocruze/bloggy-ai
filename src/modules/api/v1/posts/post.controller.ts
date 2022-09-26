@@ -68,6 +68,11 @@ export async function getPostById(req: Request, res: Response) {
   try {
     const data = await byId(id);
 
+    if (!data) {
+      res.status(404).send({ success: false, message: 'Post not found' });
+      return;
+    }
+
     return res.status(200).json({
       success: true,
       data: data,
