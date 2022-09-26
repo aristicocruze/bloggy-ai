@@ -16,7 +16,7 @@ export async function getPosts(req: Request, res: Response) {
     return res.status(200).json({
       success: true,
       data: data.data.choices,
-      usage: data.data.usage,
+      //usage: data.data.usage,
     });
   } catch (error) {
     logger.error(error);
