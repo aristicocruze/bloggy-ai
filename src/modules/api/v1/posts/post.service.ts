@@ -1,20 +1,57 @@
-import { Configuration, OpenAIApi } from "openai";
+import { Configuration, OpenAIApi } from 'openai';
+import { Post } from './post.model';
 
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
 
-export async function get(search: string) {
-  const response = await openai.createCompletion({
-    model: "text-davinci-002",
-    prompt: `create a long blog post that has a title and content about ${search}:`,
+function baseObject(searchPrompt: string, maxTokens: number) {
+  return {
+    model: 'text-davinci-002',
+    prompt: searchPrompt,
     temperature: 0,
-    max_tokens: 500,
+    max_tokens: maxTokens,
     top_p: 1.0,
-    frequency_penalty: 0.0,
-    presence_penalty: 0.0,
-  });
+    frequency_penalty: 2.0,
+    presence_penalty: 2.0,
+  };
+}
 
-  return response;
+export async function generate(search: string) {
+  return await openai.createCompletion(
+    baseObject(
+      `create a long blog post that has a title and content about ${search}:`,
+      500
+    )
+  );
+}
+
+export async function topics(topic: string) {
+  return await openai.createCompletion(
+    baseObject(`create a list of 20 topics about ${topic}:`, 500)
+  );
+}
+
+// create post schema to type entry
+export async function save(post: any) {
+  return await Post.create(post);
+}
+
+// get all posts pagitated
+export async function getAll(offset: number, limit: number) {
+  return await Post.findAndCountAll({
+    where: { private: false },
+    offset,
+    limit,
+    order: [['title', 'ASC']],
+  });
+}
+
+export async function byId(id: string) {
+  return await Post.findOne({
+    where: {
+      id,
+    },
+  });
 }
