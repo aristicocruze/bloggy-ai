@@ -9,7 +9,9 @@ export async function generatePost(req: Request, res: Response) {
 
   try {
     if (!search) {
-      res.status(400).send({ message: 'search param is required' });
+      res
+        .status(400)
+        .send({ success: false, message: 'search param is required' });
       return;
     }
     const data = await generate(search);
