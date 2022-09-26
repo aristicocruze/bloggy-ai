@@ -41,6 +41,7 @@ export async function save(post: any) {
 // get all posts pagitated
 export async function getAll(offset: number, limit: number) {
   return await Post.findAndCountAll({
+    where: { private: false },
     offset,
     limit,
     order: [['title', 'ASC']],
