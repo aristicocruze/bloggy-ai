@@ -4,7 +4,25 @@ import { Table, Column, Model } from 'sequelize-typescript';
   timestamps: true,
   paranoid: true,
 })
-export class Idope_rd extends Model {
-  @Column({ primaryKey: true, autoIncrement: true, unique: true })
-  id: number;
+export class Post extends Model {
+  @Column({ primaryKey: true, unique: true })
+  id: string;
+
+  @Column
+  title: string;
+
+  @Column
+  body: string;
+
+  @Column
+  img: string;
+
+  @Column
+  author: string;
+
+  @Column
+  private: boolean;
+
+  @Column
+  token: string;
 }
