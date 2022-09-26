@@ -45,6 +45,9 @@ export async function getAll(offset: number, limit: number) {
     offset,
     limit,
     order: [['title', 'ASC']],
+    attributes: {
+      exclude: ['token'],
+    },
   });
 }
 
@@ -53,5 +56,33 @@ export async function byId(id: string) {
     where: {
       id,
     },
+    attributes: {
+      exclude: ['token'],
+    },
   });
+}
+
+// get token by id
+async function getToken(id: string) {
+  const token = await Post.findOne({
+    where: {
+      id,
+    },
+  });
+
+  return token?.token;
+}
+
+export async function update(id: string, post: any) {
+  const token = await getToken(id);
+  // check if token is equal to post.token
+  if (token === post.token) {
+    return await Post.update(post, {
+      where: {
+        id,
+      },
+    });
+  } else {
+    return null;
+  }
 }

@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { v4 as uuidv4 } from 'uuid';
 import logger from '../../../../utils/logger';
 import { getPagination, getPaginData } from '../../../../utils/pagination';
-import { generate, topics, save, byId, getAll } from './post.service';
+import { generate, topics, save, byId, getAll, update } from './post.service';
 
 export async function generatePost(req: Request, res: Response) {
   const search = req.query.search as string;
@@ -50,6 +50,8 @@ export async function createPost(req: Request, res: Response) {
 
   try {
     post.id = uuidv4();
+    post.token = uuidv4().substring(0, 10);
+
     const data = await save(post);
 
     return res.status(200).json({
@@ -103,5 +105,30 @@ export async function getAllPosts(req: Request, res: Response) {
   } catch (e: any) {
     logger.error('Error getting all orders', e);
     res.status(500).json({ success: false, message: e.message });
+  }
+}
+
+// update post
+export async function updatePost(req: Request, res: Response) {
+  const id = req.params.id;
+  const post = req.body;
+
+  try {
+    const data = await update(id, post);
+
+    if (!data) {
+      res
+        .status(404)
+        .send({ success: false, message: 'Unable to update post' });
+      return;
+    }
+
+    return res.status(200).json({
+      success: true,
+      data: data,
+    });
+  } catch (error) {
+    logger.error(error);
+    res.status(500).json({ success: false, error: error });
   }
 }
