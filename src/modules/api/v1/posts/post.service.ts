@@ -28,6 +28,6 @@ export async function generate(search: string) {
 
 export async function topics(topic: string) {
   return await openai.createCompletion(
-    baseObject(`list 40 topics about ${topic}:`, 250)
+    baseObject(`create a list of 20 topics about ${topic}:`, 250)
   );
 }
