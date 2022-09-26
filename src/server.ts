@@ -1,16 +1,16 @@
-import "reflect-metadata";
+import 'reflect-metadata';
 
-import express from "express";
-import cors from "cors";
-import morgan from "morgan";
+import express from 'express';
+import cors from 'cors';
+import morgan from 'morgan';
 
-import { CORS_ORIGIN } from "./constants";
-import helmet from "helmet";
-import routes from "./routes";
+import { CORS_ORIGIN } from './constants';
+import helmet from 'helmet';
+import routes from './routes';
 
 const app = express();
 
-app.use(morgan("dev"));
+app.use(morgan('dev'));
 app.use(express.json());
 app.use(
   cors({
@@ -22,6 +22,6 @@ app.use(
 app.use(helmet());
 
 // routes.
-app.use("/api/v1", routes);
+app.use('/api/v1', routes);
 
 export default app;
